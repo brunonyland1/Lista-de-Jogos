@@ -1,0 +1,85 @@
+
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+
+
+/* RESETS */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #23252A;
+}
+
+.container{
+    width: 1400px;
+    height: 800px;
+    background-color: bisque;
+    display: flex;
+    border-radius: 5px;
+    background: #23252A;
+    box-shadow: inset 10px 10px 10px #1b1d21,
+    inset -10px -10px 10px #2b2d33;
+}
+
+.menu{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.menu__title {
+    flex: 1;
+    border: 1px solid yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #23252A;
+    color: white;
+}
+
+.menu__item{
+    flex: 4;
+    border: 1px solide green;
+}
+
+.menu__infos{
+    flex: 3;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+}
+
+.jogo__title{
+    flex: 1;
+}
+
+.jogo__descricao {
+    flex: 4;
+    display: flex;
+    border: solid 1px red;
+}
+
+.jogo-descricao__imagem{
+    border: solid   1px blue;
+}
+
+.img-box{
+    width:200px;
+    height: 150px;
+}
+
+.img-box img{
+    width: 100%;
+    height: 100%;
+}
