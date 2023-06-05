@@ -10,6 +10,8 @@
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    list-style: none;
 }
 
 body{
@@ -18,6 +20,7 @@ body{
     justify-content: center;
     height: 100vh;
     background-color: #e8e4d6;
+    color: white;
 }
 
 .container{
@@ -44,10 +47,72 @@ body{
 }
 
 .menu__lista{
-    list-style: none;
     width: 100%;
-    border: 1px solid green;
     height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.menu-lista-item__box{
+    background: url(../IMAGENS/overwatch-bg.jpg);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 30%;
+    position: relative;
+}
+
+
+
+/* FIREFOX DOES NOT SUPPORT :has AT MOMENTO */
+.menu-lista-item__box:has(.genshin){
+    background: url(../IMAGENS/genshin-bg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.menu-lista-item__box:has(.diablo){
+    background: url(../IMAGENS/diablo-bg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.menu-lista-item__box:has(.wow){
+    background: url(../IMAGENS/wow-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.menu-lista-item__box::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.menu-lista-item__box a{
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+
+.menu-lista-item__box a:hover{
+    color: red;
+    transition: ease-in 0.3s;
 }
 
 .menu__title {
@@ -62,7 +127,6 @@ body{
 
 .menu__item{
     flex: 4;
-    border: 1px solide green;
 }
 
 .menu__infos{
@@ -73,24 +137,31 @@ body{
 
 .jogo__title{
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 5px;
+    justify-content: center;
 }
 
 .jogo__descricao {
     flex: 4;
     display: flex;
-    border: solid 1px red;
+    padding: 10px;
 }
 
 .jogo-descricao__imagem{
-    border: solid   1px blue;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 .img-box{
     width:200px;
-    height: 150px;
+    height: 100%
 }
 
 .img-box img{
     width: 100%;
     height: 100%;
+    background: url(../IMAGENS/genshin-bg.jpeg);
 }
