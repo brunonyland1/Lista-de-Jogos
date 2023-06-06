@@ -1,5 +1,6 @@
 const jogos = [
     {
+        id: 'overwatch',
         nome: 'Overwatch',
         categoria: 'FPS',
         nota: '8.5/10',
@@ -7,6 +8,7 @@ const jogos = [
         imagem: './imagens/overwatch-bg.jpg'
     },
     {
+        id: 'genshin',
         nome: 'Genshin Impact',
         categoria: 'Otaku',
         nota: '0/10',
@@ -14,6 +16,7 @@ const jogos = [
         imagem: './imagens/genshin-bg.jpeg'
     },
     {
+        id: 'diablo',
         nome: 'Diablo IV',
         categoria: 'Hack and Slash',
         nota: '9.5/10',
@@ -21,6 +24,7 @@ const jogos = [
         imagem: './imagens/diablo-bg.jpeg'
     },
     {
+        id: 'wow',
         nome: 'World of Warcraft',
         categoria: 'RPG',
         nota: '8/10',
@@ -29,45 +33,59 @@ const jogos = [
     }
 
 ];
-const overwatch = document.querySelector('.overwatch');
-const genshin = document.querySelector('.genshin');
-const diablo = document.querySelector('.diablo');
-const wow = document.querySelector('.wow');
-const jogoTitulo = document.querySelector('.titulo');
-const jogoGenero = document.querySelector('.genero');
-const jogoNota = document.querySelector('.nota');
-const jogoDescricao = document.querySelector('.jogo-descricao__texto');
-const jogoImagem = document.querySelector('.jogo-img');
 
-overwatch.addEventListener('click', () => {
-    jogoTitulo.innerHTML = jogos[0].nome;
-    jogoGenero.innerHTML = jogos[0].categoria;
-    jogoNota.innerHTML = jogos[0].nota;
-    jogoDescricao.innerHTML = jogos[0].descricao;
-    jogoImagem.src = jogos[0].imagem;
+const mudar = (idJogo) => {
+    const temp = document.querySelector('#dados')
+    const tempJogo = jogos.filter(jogo => jogo.id === idJogo)[0]
+    temp.querySelector('.titulo').innerHTML = tempJogo.nome;
+    temp.querySelector('.genero').innerHTML = tempJogo.categoria;
+    temp.querySelector('.nota').innerHTML = tempJogo.nota;
+    temp.querySelector('.jogo-descricao__texto').innerHTML = tempJogo.descricao;
+    temp.querySelector('.jogo-img').src = tempJogo.imagem;
+}
 
-})
+// const overwatch = document.querySelector('.overwatch');
+// const genshin = document.querySelector('.genshin');
+// const diablo = document.querySelector('.diablo');
+// const wow = document.querySelector('.wow');
 
-genshin.addEventListener('click', () => {
-    jogoTitulo.innerHTML = jogos[1].nome;
-    jogoGenero.innerHTML = jogos[1].categoria;
-    jogoNota.innerHTML = jogos[1].nota;
-    jogoDescricao.innerHTML = jogos[1].descricao;
-    jogoImagem.src = jogos[1].imagem;
-})
 
-diablo.addEventListener('click', () => {
-    jogoTitulo.innerHTML = jogos[2].nome;
-    jogoGenero.innerHTML = jogos[2].categoria;
-    jogoNota.innerHTML = jogos[2].nota;
-    jogoDescricao.innerHTML = jogos[2].descricao;
-    jogoImagem.src = jogos[2].imagem;
-})
+// overwatch.addEventListener('click', () => {
+    // jogoTitulo.innerHTML = jogos[0].nome;
+    // jogoGenero.innerHTML = jogos[0].categoria;
+    // jogoNota.innerHTML = jogos[0].nota;
+    // jogoDescricao.innerHTML = jogos[0].descricao;
+    // jogoImagem.src = jogos[0].imagem;
 
-wow.addEventListener('click', () => {
-    jogoTitulo.innerHTML = jogos[3].nome;
-    jogoGenero.innerHTML = jogos[3].categoria;
-    jogoNota.innerHTML = jogos[3].nota;
-    jogoDescricao.innerHTML = jogos[3].descricao;
-    jogoImagem.src = jogos[3].imagem;
-});
+// })
+
+// genshin.addEventListener('click', () => {
+//     jogoTitulo.innerHTML = jogos[1].nome;
+//     jogoGenero.innerHTML = jogos[1].categoria;
+//     jogoNota.innerHTML = jogos[1].nota;
+//     jogoDescricao.innerHTML = jogos[1].descricao;
+//     jogoImagem.src = jogos[1].imagem;
+// })
+
+// diablo.addEventListener('click', () => {
+//     jogoTitulo.innerHTML = jogos[2].nome;
+//     jogoGenero.innerHTML = jogos[2].categoria;
+//     jogoNota.innerHTML = jogos[2].nota;
+//     jogoDescricao.innerHTML = jogos[2].descricao;
+//     jogoImagem.src = jogos[2].imagem;
+// })
+
+// wow.addEventListener('click', () => {
+//     jogoTitulo.innerHTML = jogos[3].nome;
+//     jogoGenero.innerHTML = jogos[3].categoria;
+//     jogoNota.innerHTML = jogos[3].nota;
+//     jogoDescricao.innerHTML = jogos[3].descricao;
+//     jogoImagem.src = jogos[3].imagem;
+// });
+
+
+// const jogoTitulo = temp.querySelector('.titulo');
+// const jogoGenero = temp.querySelector('.genero');
+// const jogoNota = temp.querySelector('.nota');
+// const jogoDescricao = temp.querySelector('.jogo-descricao__texto');
+// const jogoImagem = temp.querySelector('.jogo-img');
